@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #B88E2F;
+  --font-color: #333333;
+  --header-background: #FFFFFF;
+  --light-yellow: #FFF3E3;
+  --font: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--cor-fundo);
+  color: black;
+
+  height: 100vh;
+  background: #FFF3E3;
+  
+}
+
+header {
+  width: 100%;
+  height: 6.25rem;
+  margin: 0 auto;
+  background: var(--header-background);
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2rem 3.375rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+  padding: 0.28125rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+  font-family: var(--font);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 4.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.875rem;
+}
+
+.hero-section {
+  width: 100%;
+  height: 45rem;
+  margin: 0 auto;
+
+  background-image: url('/assets/background-1.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5rem;
+  padding-top: 2rem;       
+  box-sizing: border-box;
+}
+
+
+.hero-card {
+  max-width: 40.19rem;
+  height: 28rem;
+  background: var(--light-yellow);
+
+  padding: 3.875rem 2.625rem;
+  border-radius: 0.625rem;
+}
+
+.hero-card span {
+  font-weight: 500;
+  color: black;
+  letter-spacing: 3px;
+  line-height: 24px;
+}
+
+.hero-card h2 {
+  color: var(--primary);
+  font-size: 3.25rem;       
+  line-height: 4.0625rem;   
+  max-width: 34.9375rem;   
+  
+  margin-bottom: 1.0625rem;
+}
+
+.hero-card p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding-bottom: 2.875rem;
+}
+
+.hero-card button {
+  background: var(--primary);
+  width: 13.875rem;
+  height: 4.625rem;
+  padding: 1.5rem 4.5rem;
+  border: none;
+  color: var(--header-background);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@media (max-width: 48rem) { /* Menor que 768px */
+  .hero-card h2 {
+    font-size: 2.25rem;     /* Diminui um pouco a fonte no celular para o texto não cortar nas bordas */
+    line-height: 2.8rem;
+  }
+}
