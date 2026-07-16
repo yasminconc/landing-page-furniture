@@ -399,3 +399,133 @@ header {
   justify-content: center;
   font-size: 1.2rem;
 }
+
+/* Container Geral */
+.last-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+  background-color: #FAFAFA;
+  overflow: hidden;
+}
+
+/* Títulos */
+.title-box {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.title-box h3 {
+  font-size: 1.25rem;
+  color: #616161;
+  font-weight: 600;
+}
+.title-box h2 {
+  font-size: 2.5rem;
+  color: #3A3A3A;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+/* --- A MÁGICA DO GRID COMEÇA AQUI --- */
+.gallery-grid {
+  display: grid;
+  /* Criamos 16 colunas de tamanho igual para servir de régua */
+  grid-template-columns: repeat(16, 1fr);
+  /* Duas linhas verticais para separar o "bloco de cima" do "bloco de baixo" */
+  grid-template-rows: 340px 240px 100px;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1440px;
+}
+
+/* Configuração geral de todas as imagens */
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* --- DISTRIBUIÇÃO NA RÉGUA DE 16 COLUNAS --- */
+
+/* ================= LADO ESQUERDO ================= */
+
+/* 1. Estante (fina no topo) - Começa na coluna 1 e vai até a 2 */
+.img-1 {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  height: 380px;
+  align-self: end;
+}
+
+/* 2. Cadeira Amarela (larga na base) - Começa na coluna 1 e vai até a 3 (mais larga!) */
+.img-3 {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  height: 340px;
+  align-self: start;
+}
+
+/* 3. Mesa de escritório (enorme no topo) - Começa na coluna 2 e vai até a 6 */
+.img-2 {
+  grid-column: 2 / 6;
+  grid-row: 1;
+  height: 310px;
+  align-self: end;
+}
+
+/* 4. Bancos com vaso (médio na base) - Começa na coluna 3 e vai até a 6 */
+.img-4 {
+  grid-column: 3 / 6;
+  grid-row: 2;
+  height: 240px;
+  align-self: start;
+}
+
+
+/* ================= CENTRO (FOTO PRINCIPAL) ================= */
+
+/* 5. Sala de jantar - Ocupa da coluna 6 até a 9 (linhas 1 e 2 juntas) */
+.img-5 {
+  grid-column: 6 / 9;
+  grid-row: 1 / span 2;
+  height: 500px;
+  align-self: center;
+}
+
+
+/* ================= LADO DIREITO ================= */
+
+/* 6. Cama de casal (topo) - Começa na coluna 9 e vai até a 13 */
+.img-6 {
+  grid-column: 9 / 13;
+  grid-row: 1;
+  height: 340px;
+  align-self: end;
+}
+
+/* 7. Quadro decorativo (base) - Começa na coluna 9 e vai até la 12 */
+.img-7 {
+  grid-column: 9 / 12;
+  grid-row: 2;
+  height: 220px;
+  align-self: start;
+}
+
+/* 8. Mesa de jantar rústica (topo) - Começa na coluna 13 e vai até a 17 (fim) */
+.img-8 {
+  grid-column: 13 / 17;
+  grid-row: 1;
+  height: 410px;
+  align-self: end;
+}
+
+/* 9. Cozinha moderna (base) - Começa na coluna 12 e vai até a 17 (fim) */
+.img-9 {
+  grid-column: 12 / 17;
+  grid-row: 2;
+  height: 240px;
+  align-self: start;
+}
